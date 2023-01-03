@@ -1,0 +1,17 @@
+# docker-compose-python.yml
+# 2023-01-02 | CR
+
+version: "3"
+
+services:
+  python_alpine:
+    container_name: python_alpine
+    platform: linux/x86_64
+    image: python:3.12-rc-alpine
+    # expose:
+    #   - 3306
+    # ports:
+    #   - 3306:3306
+    tty: true # To leave the container running
+    volumes:
+      - ./..:/var/app
